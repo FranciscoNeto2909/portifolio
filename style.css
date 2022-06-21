@@ -36,6 +36,9 @@ body {
     color: rgb(50, 50, 50);
     background-color: rgba(0, 0, 0, 0.08);
 }
+.item-img{
+    height: 30px;
+}
 .inicio {
     height: 500px;
     width: 100vw;
@@ -170,7 +173,7 @@ body {
     }
     .header-menu{
         margin-left: 5px;
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
