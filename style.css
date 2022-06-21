@@ -189,12 +189,12 @@ body {
         padding: 5px;
     }
     .title-container{
-        width: 65%;
+        width: 83%;
         height: 22px;
         margin: 0 auto;
     }
     .title{
-        font-size: 1.05em;
+        font-size: 1em;
     }
     .info{
         width: 80%;
