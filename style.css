@@ -150,10 +150,11 @@ body {
     justify-content: space-between;
 }
 .repositorios-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
 }
 .repositorio{
     height: 200px;
@@ -271,5 +272,12 @@ body {
     }
     .rtk-text, .axios-text{
         font-size:1em;
+    }
+    .repositorios-container{
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
