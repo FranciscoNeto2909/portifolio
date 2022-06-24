@@ -11,7 +11,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
 .header, .header-mobile {
     display: flex;
@@ -32,6 +31,7 @@ body {
     padding: 5px;
     margin-top: 5px;
     border-radius: 2px;
+    font-weight: 500;
 }
 .menu-item:hover {
     color: rgb(50, 50, 50);
@@ -45,9 +45,9 @@ body {
 }
 .inicio, .habilidades, .repositorios, .projetos{
     height: 100vh;
+    width: 90vw;
 }
 .inicio {
-    width: 100vw;
     padding: 30px;
     text-align: center;
 }
@@ -85,15 +85,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .habilidades, .repositorios{
-    width: 100vw;
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.habilidades{
-    background-color: #a5ffeec0;
 }
 .habilidades-title {
     font-size: 2em;
@@ -148,7 +144,6 @@ body {
 }
 .repositorios{
     display: flex;
-    height: 550px;
     justify-content: space-between;
 }
 .repositorio-title, .repositorio-resume{
@@ -165,7 +160,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 170px;
+    height: 180px;
     width: 350px;
     padding: 5px;
     margin: 5px;
@@ -254,15 +249,18 @@ body {
         align-items: center;
         margin: 0 auto;
     }
-    .inicio{
+    .inicio, .habilidades, .repositorios, .projetos{
         height: 100vh;
+        width: 100vw;
+    }
+    .inicio{
         margin-top: 50px;
         padding: 10px;
     }
     .title-container{
         position: relative;
         width: 250px;
-        height: 22px;
+        height: 21px;
         margin: 0 auto;
     }
     .title{
@@ -280,9 +278,6 @@ body {
     .info-resume{
         margin: 0%;
         font-size: 0.8em;
-    }
-    .habilidades{
-        height: 100vh;
     }
     .habilidade {
         height: 60px;
@@ -305,7 +300,6 @@ body {
         font-size:1em;
     }
     .repositorios-container{
-        width: 100vw;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
