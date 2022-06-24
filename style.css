@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: system-ui, sans-serif;
 }
 body {
     background-color: #C7E2FA;
@@ -42,8 +43,10 @@ body {
 .item-img{
     height: 30px;
 }
+.inicio, .habilidades, .repositorios, .projetos{
+    height: 100vh;
+}
 .inicio {
-    height: 500px;
     width: 100vw;
     padding: 30px;
     text-align: center;
@@ -61,7 +64,7 @@ body {
     height: 38px;
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
-    animation: apresentation 15s ease-in-out;
+    animation: apresentation 15s ease-in-out infinite;
 }
 .info {
     width: 440px;
@@ -90,7 +93,6 @@ body {
     align-items: center;
 }
 .habilidades{
-    height: 500px;
     background-color: #a5ffeec0;
 }
 .habilidades-title {
@@ -100,6 +102,7 @@ body {
 }
 .habilidades-container{
     width: 80%;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
@@ -124,7 +127,6 @@ body {
 .rtk-text {
     font-size: 22px;
     font-weight: bolder;
-    font-family: system-ui, sans-serif;
     color: #764ABC;
 }
 .habilidade--rtk {
@@ -143,37 +145,63 @@ body {
 .axios-text {
     font-size: 22px;
     font-weight: bolder;
-    font-family: system-ui, sans-serif;
 }
 .repositorios{
-    height: 400px;
+    display: flex;
+    height: 550px;
     justify-content: space-between;
+}
+.repositorio-title, .repositorio-resume{
+    margin-bottom: 15px;
 }
 .repositorios-container{
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 
 }
 .repositorio{
-    height: 200px;
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 170px;
+    width: 350px;
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.35);
 }
+.rep-title{
+    color: rgb(100, 100, 100);
+}
+.rep-resume{
+    font-size: 0.9em;
+    font-weight: 500;
+}
 .rep-img{
     height: 100px;
     border-radius: 5px;
 }
+.rep-link{
+    width: 50%;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #764ABC;
+}
+.rep-link:hover{
+    background-color:  #764ddd;
+}
 @keyframes apresentation {
     0% {
-        transform: translateX(100%);
+        transform: translateX(101%);
+    }
+    50%{
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(101%);
     }
 }
 @keyframes border-blink {
@@ -227,8 +255,9 @@ body {
         margin: 0 auto;
     }
     .inicio{
-        margin-top: 20px;
-        padding: 5px;
+        height: 100vh;
+        margin-top: 50px;
+        padding: 10px;
     }
     .title-container{
         position: relative;
@@ -253,7 +282,7 @@ body {
         font-size: 0.8em;
     }
     .habilidades{
-        height: 520px;
+        height: 100vh;
     }
     .habilidade {
         height: 60px;
@@ -262,6 +291,8 @@ body {
         font-size: 1.5em;
     }
     .habilidades-container {
+        width: 90vw;
+        margin-top: 50px;
         height: 450px;
     }
     .axios-container{
