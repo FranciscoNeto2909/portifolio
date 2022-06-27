@@ -11,11 +11,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 .header, .header-mobile {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: #C7E2FA;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 .header-line {
     margin-top: 20px;
@@ -52,28 +59,31 @@ body {
     text-align: center;
 }
 .title-container {
-    display: flex;
     overflow: hidden;
+    margin-left: 28%;
+    position: relative;
+    height: 38px;
     width: 530px;
-    margin: 0 auto;
     text-align: start;
-    animation: border-blink 2.5s ease-in-out infinite;
+    border-right: 1px solid;
+    animation: apresentation 20s ease-in-out infinite;
 }
 .title {
-    text-justify: center;
-    height: 38px;
+    width: 530px;
     font-size: 36px;
+    position: absolute;
     font-family: Arial, Helvetica, sans-serif;
-    animation: apresentation 15s ease-in-out infinite;
 }
 .info {
-    width: 440px;
-    height: 230px;
+    height: 300px;
+    width: 500px;
     margin: 30px auto;
+    padding: 10px;
     border-radius: 15px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.25);
 }
 .info-img {
@@ -81,7 +91,6 @@ body {
     border-radius: 5px;
 }
 .info-resume {
-    margin: 0 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .habilidades, .repositorios{
@@ -98,6 +107,7 @@ body {
 }
 .habilidades-container{
     width: 80%;
+    margin: 0 auto;
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -190,44 +200,28 @@ body {
 }
 @keyframes apresentation {
     0% {
-        transform: translateX(101%);
+        width: 0;
     }
     50%{
-        transform: translateX(0);
+        width: 530px;
     }
     100% {
-        transform: translateX(101%);
+        width: 0;
     }
 }
-@keyframes border-blink {
-    0% {
-        border-right: 1px solid #000;
-    }
-    20% {
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    40% {
-        border-right: 1px solid #000;
-    }
-    60% {
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    80% {
-        border-right: 1px solid #000;
-    }
-    100% {
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
-    }
-}
-@media  (max-width : 650px) {
+
+@media  (max-width : 800px) {
     .habilidade {
         height: 70px;
     }
-    .habilidades-container {
+    .habilidades-container{
         display: flex;
         height: 410px;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .repositorio{
+        width: 300px;
     }
     .habilidade--redux, .habilidade--rtk, .habilidade--axios {
         height: 55px;
@@ -235,6 +229,14 @@ body {
     .axios-container{
         margin: 0;
     } 
+}
+@media  (max-width : 690px){
+    .repositorios-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 @media (max-width : 500px) {
     .header{
@@ -250,7 +252,6 @@ body {
         margin: 0 auto;
     }
     .inicio, .habilidades, .repositorios, .projetos{
-        height: 100vh;
         width: 100vw;
     }
     .inicio{
@@ -258,19 +259,16 @@ body {
         padding: 10px;
     }
     .title-container{
-        position: relative;
-        width: 250px;
-        height: 21px;
-        margin: 0 auto;
+        height: 25px;
+        margin-left: 25px;
     }
     .title{
-        position: absolute;
-        font-size: 1.05em;
+        font-size: 1.4em;
     }
     .info{
+        height: 300px;
         width: 80%;
         margin-top: 50px;
-        flex-direction: column;
     }
     .info-img {
         height: 135px;
@@ -299,10 +297,22 @@ body {
     .rtk-text, .axios-text{
         font-size:1em;
     }
-    .repositorios-container{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        align-items: center;
+    .repositorios{
+        height: 100%;
+    }
+    .repositorio{
+        height: 200px;
+    }
+
+    @keyframes apresentation {
+        0% {
+            width: 0;
+        }
+        50%{
+            width: 330px;
+        }
+        100% {
+            width: 0;
+        }
     }
 }
