@@ -6,10 +6,12 @@
     list-style: none;
     font-family: system-ui, sans-serif;
 }
-body {
-    background-color: #C7E2FA;
+body,.header, .header-mobile, .info, .habilidades, .repositorios, .repositorio, .projetos, .projeto{
     display: flex;
     flex-direction: column;
+}
+body {
+    background-color: #C7E2FA;
     align-items: center;
     overflow-x: hidden;
 }
@@ -19,8 +21,6 @@ body {
     top: 0;
     background-color: #C7E2FA;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     z-index: 1;
 }
@@ -52,7 +52,7 @@ body {
 }
 .inicio, .habilidades, .repositorios, .projetos{
     min-height: 100vh;
-    width: 90vw;
+    width: 100vw;
 }
 .inicio {
     padding: 30px;
@@ -86,8 +86,6 @@ body {
     margin: 30px auto;
     padding: 10px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.25);
@@ -102,9 +100,11 @@ body {
 .habilidades, .repositorios, .projetos{
     padding: 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+}
+.habilidades{
+    background-color: #00c0c0;
+    border-radius: 5px;
 }
 .habilidades-title {
     font-size: 2em;
@@ -159,7 +159,6 @@ body {
     font-weight: bolder;
 }
 .repositorios{
-    display: flex;
     justify-content: space-between;
 }
 .repositorio-title, .repositorio-resume{
@@ -173,8 +172,6 @@ body {
 
 }
 .repositorio{
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     height: 220px;
     width: 290px;
@@ -184,7 +181,7 @@ body {
     background-color: rgba(255, 255, 255, 0.35);
 }
 .rep-title, .proj-title{
-    color: rgb(100, 100, 100);
+    color: rgb(90, 90, 90);
 }
 .rep-resume, .proj-resume{
     font-size: 0.9em;
@@ -212,9 +209,7 @@ body {
     margin:10px 0;
     padding: 10px;
     border-radius: 5px;
-    display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.35);
 }
 .projeto-img{
