@@ -58,9 +58,15 @@ body {
     padding: 30px;
     text-align: center;
 }
+.apresentation{
+    width: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .title-container {
     overflow: hidden;
-    margin-left: 28%;
     position: relative;
     height: 38px;
     width: 530px;
@@ -227,7 +233,7 @@ body {
     }
 }
 
-@media (max-width : 1000px) {
+@media (max-width : 1024px) {
     .repositorios-container, .projetos-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -281,9 +287,11 @@ body {
         margin-top: 50px;
         padding: 10px;
     }
+    .apresentation{
+        width: 330px;
+    }
     .title-container{
         height: 25px;
-        margin-left: 25px;
     }
     .title{
         font-size: 1.4em;
