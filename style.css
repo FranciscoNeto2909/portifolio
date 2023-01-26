@@ -71,9 +71,13 @@ body {
     padding: 30px;
     text-align: center;
 }
+.inicio-resume{
+    font-size: 28px;
+}
 .apresentation{
     width: 540px;
     margin: 0 auto;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -82,20 +86,20 @@ body {
     overflow: hidden;
     position: relative;
     height: 38px;
-    width: 530px;
     text-align: start;
     border-right: 1px solid;
-    animation: apresentation 20s ease-in-out infinite;
+    animation: apresentation 8s steps(35) 1s infinite;
 }
 .title {
     width: 530px;
-    font-size: 36px;
+    font-size: 26px;
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
 }
 .info {
     height: 300px;
     width: 500px;
+    gap: .5rem;
     margin: 30px auto;
     padding: 10px;
     border-radius: 15px;
@@ -106,6 +110,7 @@ body {
 .info-img {
     height: 200px;
     border-radius: 5px;
+    margin: 5px 0;
 }
 .info-resume {
     font-family: Arial, Helvetica, sans-serif;
@@ -171,9 +176,6 @@ body {
     font-size: 22px;
     font-weight: bolder;
 }
-.repositorios{
-    justify-content: space-between;
-}
 .repositorio-title, .repositorio-resume{
     margin-bottom: 15px;
 }
@@ -219,7 +221,7 @@ body {
 }
 .projeto{
     width: 300px;
-    margin:10px 0;
+    margin:5px;
     padding: 10px;
     border-radius: 5px;
     justify-content: space-evenly;
@@ -233,17 +235,15 @@ body {
     0% {
         width: 0;
     }
-    50%{
-        width: 530px;
-    }
     100% {
-        width: 0;
+        width: 400px;
     }
 }
 
 @media (max-width : 1024px) {
     .repositorios-container, .projetos-container{
         grid-template-columns: repeat(2, 1fr);
+        place-content: center;
     }
 }
 
@@ -267,21 +267,31 @@ body {
         margin: 0;
     } 
 }
-@media  (max-width : 690px){
+@media (max-width : 500px) {
+    ::-webkit-scrollbar{
+        height: 0;
+        width: 10px;
+    }
     .repositorios-container, .projetos-container{
+        place-content: unset;
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        width: 90vw;
+        overflow-x: scroll;
         align-items: center;
     }
-}
-@media (max-width : 500px) {
+    .repositorio, .projeto{
+        height: 500px;
+        min-width: 90vw;
+    }
     .header{
         display: none;
     }
     .header-mobile{
         display: flex;
         margin: 0 auto;
+        position: fixed;
+        bottom: 0;
+        top: auto;
     }
     .header-menu{
         width: 80vw;
@@ -301,6 +311,9 @@ body {
     .title-container{
         height: 25px;
     }
+    .inicio-resume{
+        font-size: 1.5em;
+    }
     .title{
         font-size: 1.4em;
     }
@@ -308,9 +321,6 @@ body {
         height: 300px;
         width: 80%;
         margin-top: 50px;
-    }
-    .info-img {
-        height: 200px;
     }
     .info-resume{
         margin: 0%;
@@ -336,22 +346,19 @@ body {
     .rtk-text, .axios-text{
         font-size:1em;
     }
+    .projetos{
+        margin-bottom: 40px;
+    }
     .repositorios{
         height: 100%;
-    }
-    .repositorio{
-        height: 200px;
     }
 
     @keyframes apresentation {
         0% {
             width: 0;
         }
-        50%{
-            width: 330px;
-        }
         100% {
-            width: 0;
+            width: 335px;
         }
     }
 }
