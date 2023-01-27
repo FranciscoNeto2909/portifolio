@@ -238,14 +238,14 @@ body {
     animation: moveToLeft 2s ease-in-out infinite;
 }
 .repos-seta--left{
-    left: 3px;
+    left: 5px;
 }
 .proj-seta--right, .repos-seta--right{
     left: 95%;
     animation: moveToRight 2s ease-in-out infinite;
 }
 .repos-seta--right{
-    left: 94%;
+    left: 92%;
 }
 @keyframes moveToRight {
     0% {
@@ -303,9 +303,6 @@ body {
     .habilidades-container{
        grid-template-columns: repeat(2, 1fr);
        place-items: center;
-    }
-    .repositorio{
-        width: 300px;
     }
     .habilidade--redux, .habilidade--rtk, .habilidade--axios {
         height: 55px;
@@ -395,8 +392,8 @@ body {
     .rtk-text, .axios-text{
         font-size:1em;
     }
-    .repositorios{
-        height: 100%;
+    .rep-link, .proj-link{
+        padding: 10px;
     }
     .seta{
         display: block;
