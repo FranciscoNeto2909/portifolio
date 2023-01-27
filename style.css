@@ -88,7 +88,7 @@ body {
     height: 38px;
     text-align: start;
     border-right: 1px solid;
-    animation: apresentation 8s steps(35) 1s infinite;
+    animation: apresentation 8s steps(35) 1s infinite, blink 1.3s ease-in-out infinite;
 }
 .title {
     width: 530px;
@@ -188,7 +188,7 @@ body {
 }
 .repositorio{
     justify-content: space-evenly;
-    height: 220px;
+    height: 230px;
     width: 290px;
     padding: 5px;
     margin: 5px;
@@ -218,8 +218,10 @@ body {
 }
 .projetos{
     margin-top: 50px;
+    position: relative;
 }
 .projeto{
+    height: 400px;
     width: 300px;
     margin:5px;
     padding: 10px;
@@ -231,12 +233,64 @@ body {
     height: 250px;
     border-radius: 5px;
 }
+.projeto-header, .repositorio-header{
+    position: relative;
+}
+.seta{
+    position: absolute;
+    top: 70;
+    font-size: 40px;
+    align-self: flex-end;
+}
+.proj-seta--left, .repos-seta--left{
+    left: -25px;
+    animation: moveToLeft 2s ease-in-out infinite;
+}
+
+.proj-seta--right, .repos-seta--right{
+    left: 100%;
+    animation: moveToRight 2s ease-in-out infinite;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes apresentation {
     0% {
         width: 0;
     }
     100% {
         width: 400px;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-right: 1px solid black;
+    }
+    100% {
+        border: 0;
     }
 }
 
@@ -252,10 +306,8 @@ body {
         height: 70px;
     }
     .habilidades-container{
-        display: flex;
-        height: 410px;
-        flex-direction: column;
-        flex-wrap: wrap;
+       grid-template-columns: repeat(2, 1fr);
+       place-items: center;
     }
     .repositorio{
         width: 300px;
@@ -352,13 +404,12 @@ body {
     .repositorios{
         height: 100%;
     }
-
     @keyframes apresentation {
         0% {
             width: 0;
         }
         100% {
-            width: 335px;
+            width: 340px;
         }
     }
 }
