@@ -237,12 +237,16 @@ body {
 .proj-seta--left, .repos-seta--left{
     animation: moveToLeft 2s ease-in-out infinite;
 }
-
+.repos-seta--left{
+    left: 3px;
+}
 .proj-seta--right, .repos-seta--right{
     left: 95%;
     animation: moveToRight 2s ease-in-out infinite;
 }
-
+.repos-seta--right{
+    left: 94%;
+}
 @keyframes moveToRight {
     0% {
         transform: translateX(0);
