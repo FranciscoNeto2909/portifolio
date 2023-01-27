@@ -12,12 +12,12 @@ projSetaL.style.color = "darkgray"
 
 repositorios.onscroll = function () {
     if (this.scrollLeft === 0) {
-        reposSetaR.style.animation = "moveToLeft 2s ease-in-out infinite"
+        reposSetaR.style.animation = "moveToRight 2s ease-in-out infinite"
         reposSetaR.style.color = "#000"
         reposSetaL.style.animation = "none"
         reposSetaL.style.color = "darkgray"
     }
-    if (this.scrollLeft == 1829) {
+    if (this.scrollLeft + this.clientWidth >= this.scrollWidth) {
         reposSetaL.style.animation = "moveToLeft 2s ease-in-out infinite"
         reposSetaL.style.color = "#000"
         reposSetaR.style.animation = "none"
@@ -26,13 +26,15 @@ repositorios.onscroll = function () {
 };
 
 projetos.onscroll = function () {
+    console.log("scroll width "+this.scrollWidth)
+    console.log(this.scrollLeft + this.clientWidth)
     if (this.scrollLeft === 0) {
-        projSetaR.style.animation = "moveToLeft 2s ease-in-out infinite"
+        projSetaR.style.animation = "moveToRight 2s ease-in-out infinite"
         projSetaR.style.color = "#000"
         projSetaL.style.animation = "none"
         projSetaL.style.color = "darkgray"
     }
-    if (this.scrollLeft == 1829) {
+    if (this.scrollLeft + this.clientWidth >= this.scrollWidth) {
         projSetaL.style.animation = "moveToLeft 2s ease-in-out infinite"
         projSetaL.style.color = "#000"
         projSetaR.style.animation = "none"
