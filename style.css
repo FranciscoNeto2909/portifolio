@@ -44,7 +44,7 @@ body {
 .header-menu {
     width: 400px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .menu-item {
     color: rgb(100, 100, 100);
@@ -61,7 +61,7 @@ body {
     display: none;
 }
 .item-img{
-    height: 30px;
+    height: 35px;
 }
 .inicio, .habilidades, .repositorios, .projetos{
     min-height: 100vh;
@@ -207,15 +207,12 @@ body {
 .rep-link:hover , .proj-link:hover {
     background-color:  #764ddd;
 }
-.projetos{
-    margin-top: 50px;
-    position: relative;
-}
 .projeto, .repositorio{
     height: 400px;
     width: 300px;
     margin:5px;
     padding: 10px;
+    box-shadow: 2px 2px 8px #000;
     border-radius: 5px;
     justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.35);
@@ -229,7 +226,7 @@ body {
 }
 .seta{
     position: absolute;
-    top: 70;
+    top: 80px;
     font-size: 40px;
     align-self: flex-end;
     display: none;
@@ -246,6 +243,11 @@ body {
 }
 .repos-seta--right{
     left: 90%;
+}
+.repo-scroll, .proj-scroll{
+    position: absolute;
+    top: 100px;
+    left: 35%;
 }
 @keyframes moveToRight {
     0% {
@@ -319,7 +321,7 @@ body {
     .repositorios-container, .projetos-container{
         place-content: unset;
         display: flex;
-        width: 90vw;
+        width: 92vw;
         overflow-x: scroll;
         align-items: center;
     }
@@ -330,10 +332,14 @@ body {
     .header{
         display: none;
     }
+    .header-line{
+        display: none;
+    }
     .header-mobile{
         display: flex;
         margin: 0 auto;
         position: fixed;
+        padding: 5px 0;
         bottom: 0;
         top: auto;
         box-shadow: 2px 2px 6px #000;
@@ -365,7 +371,7 @@ body {
     }
     .info{
         height: 325px;
-        width: 80%;
+        width: 90%;
         margin-top: 50px;
     }
     .info-resume{
