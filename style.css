@@ -1,6 +1,7 @@
-html{
+html {
     scroll-behavior: smooth;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +10,41 @@ html{
     list-style: none;
     font-family: system-ui, sans-serif;
 }
-body,.header, .header-mobile, .info, .habilidades, .repositorios, .repositorio, .projetos, .projeto{
+
+body,
+.header,
+.header-mobile,
+.info,
+.habilidades,
+.repositorios,
+.repositorio,
+.projetos,
+.projeto {
     display: flex;
     flex-direction: column;
 }
+
 body {
     background-color: #C7E2FA;
     align-items: center;
     overflow-x: hidden;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background-color: transparent;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 10px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: #00c0c0;
     border-radius: 5px;
 }
-.header, .header-mobile {
+
+.header,
+.header-mobile {
     width: 100vw;
     position: sticky;
     top: 0;
@@ -37,15 +53,18 @@ body {
     align-items: center;
     z-index: 1;
 }
+
 .header-line {
     margin-top: 20px;
     width: 80%;
 }
+
 .header-menu {
     width: 400px;
     display: flex;
     justify-content: space-between;
 }
+
 .menu-item {
     color: rgb(100, 100, 100);
     padding: 5px;
@@ -53,28 +72,38 @@ body {
     border-radius: 2px;
     font-weight: 500;
 }
+
 .menu-item:hover {
     color: rgb(50, 50, 50);
     background-color: rgba(0, 0, 0, 0.08);
 }
-.header-mobile{
+
+.header-mobile {
     display: none;
 }
-.item-img{
+
+.item-img {
     height: 35px;
 }
-.inicio, .habilidades, .repositorios, .projetos{
+
+.inicio,
+.habilidades,
+.repositorios,
+.projetos {
     min-height: 100vh;
     width: 100vw;
 }
+
 .inicio {
     padding: 30px;
     text-align: center;
 }
-.inicio-resume{
+
+.inicio-resume {
     font-size: 28px;
 }
-.apresentation{
+
+.apresentation {
     width: 540px;
     margin: 0 auto;
     margin-top: 10px;
@@ -82,6 +111,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .title-container {
     overflow: hidden;
     position: relative;
@@ -90,12 +120,14 @@ body {
     border-right: 1px solid;
     animation: apresentation 8s steps(35) 1s infinite, blink 1.3s ease-in-out infinite;
 }
+
 .title {
     width: 530px;
     font-size: 26px;
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .info {
     height: 300px;
     width: 500px;
@@ -107,29 +139,36 @@ body {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.25);
 }
+
 .info-img {
     height: 200px;
     border-radius: 5px;
     margin: 5px 0;
 }
+
 .info-resume {
     font-family: Arial, Helvetica, sans-serif;
 }
-.habilidades, .repositorios, .projetos{
+
+.habilidades,
+.repositorios,
+.projetos {
     padding: 20px;
     text-align: center;
     align-items: center;
 }
-.habilidades{
-    background-color: #00c0c0;
+
+.habilidades {
     border-radius: 5px;
 }
+
 .habilidades-title {
     font-size: 2em;
     margin-bottom: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.habilidades-container{
+
+.habilidades-container {
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
@@ -137,125 +176,192 @@ body {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
+
 .habilidade {
     max-height: 100px;
     margin: 5px 20px;
 }
+
 .redux-container {
     display: inline-block;
     height: 100px;
     width: 100px;
 }
+
 .habilidade--redux {
     height: 65px;
 }
+
 .rtk-container {
     display: inline-block;
     width: 150px;
     height: 100px;
 }
+
 .rtk-text {
     font-size: 22px;
     font-weight: bolder;
     color: #764ABC;
 }
+
 .habilidade--rtk {
     height: 65px;
 }
+
 .axios-container {
     display: inline-block;
     width: 100px;
     margin-left: 20px;
 }
+
 .habilidade--axios {
     height: 75px;
     margin: 0;
     transform: rotate(-90deg);
 }
+
 .axios-text {
     font-size: 22px;
     font-weight: bolder;
 }
-.repositorio-title, .repositorio-resume, .projeto-title, .projeto-resume{
+
+.repositorio-title,
+.repositorio-resume,
+.projeto-title,
+.projeto-resume {
     margin-bottom: 15px;
 }
-.repositorios-container, .projetos-container{
+
+.repositorios-container,
+.projetos-container {
     width: 80vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 
 }
-.rep-title, .proj-title{
+
+.rep-title,
+.proj-title {
     color: rgb(90, 90, 90);
 }
-.rep-resume, .proj-resume{
+
+.rep-resume,
+.proj-resume {
     font-size: 0.9em;
     font-weight: 500;
 }
-.rep-img{
+
+.rep-img {
     height: 100px;
     border-radius: 5px;
 }
-.rep-link, .proj-link{
+
+.rep-link,
+.proj-link {
     width: 50%;
     color: #fff;
     margin: 0 auto;
     border-radius: 5px;
-    background-color: #764ABC;
+    background-color: #00c0c0;
+
 }
-.rep-link:hover , .proj-link:hover {
-    background-color:  #764ddd;
+
+.rep-link:hover,
+.proj-link:hover {
+    background-color: #764ddd;
 }
-.projeto, .repositorio{
+
+.projeto,
+.repositorio {
     height: 400px;
     width: 300px;
-    margin:5px;
+    margin: 5px;
     padding: 10px;
     box-shadow: 2px 2px 8px #000;
     border-radius: 5px;
     justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.35);
 }
-.projeto-img{
+
+.projeto-img {
     height: 250px;
     border-radius: 5px;
 }
-.projeto-header, .repositorio-header{
+
+.projeto-header,
+.repositorio-header {
     position: relative;
 }
-.seta{
+
+.seta {
     position: absolute;
     top: 80px;
     font-size: 40px;
     align-self: flex-end;
     display: none;
 }
-.proj-seta--left, .repos-seta--left{
+
+.proj-seta--left,
+.repos-seta--left {
     animation: moveToLeft 2s ease-in-out infinite;
 }
-.repos-seta--left{
+
+.repos-seta--left {
     left: 8px;
 }
-.proj-seta--right, .repos-seta--right{
+
+.proj-seta--right,
+.repos-seta--right {
     left: 95%;
     animation: moveToRight 2s ease-in-out infinite;
 }
-.repos-seta--right{
+
+.repos-seta--right {
     left: 90%;
 }
-.repo-scroll, .proj-scroll{
+
+.repo-scroll,
+.proj-scroll {
     position: absolute;
     top: 100px;
     left: 35%;
+    display: none;
+    font-weight: 500;
+    color: rgb(90, 90, 90);
 }
+
+.proj-scroll{
+    top: 95px;
+}
+
+.social-icons-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.social-icons:hover {
+    cursor: pointer;
+}
+
 @keyframes moveToRight {
     0% {
         transform: translateX(0);
     }
-    50%{
+
+    50% {
         transform: translateX(10px);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -265,9 +371,11 @@ body {
     0% {
         transform: translateX(0);
     }
-    50%{
+
+    50% {
         transform: translateX(-10px);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -277,6 +385,7 @@ body {
     0% {
         width: 0;
     }
+
     100% {
         width: 400px;
     }
@@ -286,56 +395,72 @@ body {
     0% {
         border-right: 1px solid black;
     }
+
     100% {
         border: 0;
     }
 }
 
 @media (max-width : 1024px) {
-    .repositorios-container, .projetos-container{
+
+    .repositorios-container,
+    .projetos-container {
         grid-template-columns: repeat(2, 1fr);
         place-content: center;
     }
 }
 
-@media  (max-width : 800px) {
+@media (max-width : 800px) {
     .habilidade {
         height: 70px;
     }
-    .habilidades-container{
-       grid-template-columns: repeat(2, 1fr);
-       place-items: center;
+
+    .habilidades-container {
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
     }
-    .habilidade--redux, .habilidade--rtk, .habilidade--axios {
+
+    .habilidade--redux,
+    .habilidade--rtk,
+    .habilidade--axios {
         height: 55px;
     }
-    .axios-container{
+
+    .axios-container {
         margin: 0;
-    } 
+    }
 }
+
 @media (max-width : 500px) {
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
         height: 0;
         width: 10px;
     }
-    .repositorios-container, .projetos-container{
+
+    .repositorios-container,
+    .projetos-container {
         place-content: unset;
         display: flex;
         width: 92vw;
         overflow-x: scroll;
         align-items: center;
     }
-    .repositorio, .projeto{
+
+    .repositorio,
+    .projeto {
         height: 500px;
         min-width: 90vw;
     }
-    .header{
+
+    .header {
         display: none;
     }
-    .header-line{
+
+    .header-line {
         display: none;
     }
-    .header-mobile{
+
+    .header-mobile {
         display: flex;
         margin: 0 auto;
         position: fixed;
@@ -344,70 +469,100 @@ body {
         top: auto;
         box-shadow: 2px 2px 6px #000;
     }
-    .header-menu{
+
+    .header-menu {
         width: 80vw;
         align-items: center;
         margin: 0 auto;
     }
 
-    .inicio, .habilidades, .repositorios, .projetos{
+    .inicio,
+    .habilidades,
+    .repositorios,
+    .projetos {
         width: 100vw;
     }
-    .inicio{
+
+    .inicio {
         margin-top: 50px;
         padding: 10px;
     }
-    .apresentation{
+
+    .apresentation {
         width: 330px;
     }
-    .title-container{
+
+    .title-container {
         height: 25px;
     }
-    .inicio-resume{
+
+    .inicio-resume {
         font-size: 1.5em;
     }
-    .title{
+
+    .title {
         font-size: 1.4em;
     }
-    .info{
+
+    .info {
         height: 325px;
         width: 90%;
         margin-top: 50px;
     }
-    .info-resume{
+
+    .info-resume {
         margin: 0%;
         font-size: 0.8em;
     }
+
     .habilidade {
         height: 90px;
     }
-    .habilidades-title{
+
+    .habilidades-title {
         font-size: 1.5em;
     }
+
     .habilidades-container {
         width: 90vw;
         margin-top: 50px;
         height: 600px;
     }
-    .axios-container{
+
+    .axios-container {
         margin: 0;
-    } 
-    .habilidade--redux, .habilidade--rtk, .habilidade--axios {
+    }
+
+    .habilidade--redux,
+    .habilidade--rtk,
+    .habilidade--axios {
         height: 45px;
     }
-    .rtk-text, .axios-text{
-        font-size:1em;
+
+    .rtk-text,
+    .axios-text {
+        font-size: 1em;
     }
-    .rep-link, .proj-link{
+
+    .rep-link,
+    .proj-link {
         padding: 10px;
     }
-    .seta{
+
+    .seta {
         display: block;
     }
+
+    .repo-scroll,
+    .proj-scroll {
+        display: block;
+    }
+
     @keyframes apresentation {
         0% {
             width: 0;
         }
+
         100% {
             width: 335px;
         }
