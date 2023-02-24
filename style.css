@@ -595,6 +595,7 @@ body {
     }
 
     .projeto{
+        height: 130px;
         display: flex;
         flex-direction: row-reverse;
     }
