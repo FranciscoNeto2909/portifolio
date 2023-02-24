@@ -8,8 +8,7 @@ html {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: system-ui, sans-serif;
-    cursor: default;
+    font-family: 'Quicksand','Segoe UI', sans-serif;
 }
 
 body,
@@ -127,7 +126,6 @@ body {
     width: 530px;
     font-size: 26px;
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .info {
@@ -135,22 +133,22 @@ body {
     gap: .5rem;
     margin: 30px auto;
     padding: 10px;
+    padding-bottom: 20px;
     border-radius: 15px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 0 8px #00000030;
 }
 
 .info-img {
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
     margin: 5px 0;
-    box-shadow: 0 0 8px #00000030;
 }
 
 .info-resume {
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #4b4b4b;
 }
 
 .habilidades,
@@ -174,6 +172,7 @@ body {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .habilidade {
@@ -210,21 +209,21 @@ body {
     font-weight: bold;
 }
 
-.habilidade-desc:hover{
+.habilidade-desc:hover {
     cursor: default;
 }
 
 .habilidade--html {
-    background-color: rgb(255, 51, 0);
+    background-color: #ff3300;
 }
 
 .habilidade--css {
-    background-color: rgb(0, 68, 255);
+    background-color: #0044ff;
 }
 
 .habilidade--js {
     color: #000;
-    background-color: rgb(251, 255, 0);
+    background-color: #fbff00;
 }
 
 .habilidade--react {
@@ -256,13 +255,14 @@ body {
 
 }
 
-.rep-title,
-.proj-title {
-    color: rgb(90, 90, 90);
+.rep-title{
+    text-align: center;
+    padding: 10px;
 }
 
 .rep-resume,
 .proj-resume {
+    color: #4b4b4b;
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -270,17 +270,6 @@ body {
 .rep-img {
     height: 100px;
     border-radius: 5px;
-}
-
-.rep-link,
-.proj-link {
-    width: 50%;
-    color: #fff;
-    margin: 0 auto;
-    padding: 8px 10px;
-    border-radius: 5px;
-    background: #00c0c0;
-
 }
 
 .rep-link:hover,
@@ -291,24 +280,61 @@ body {
 
 .projeto,
 .repositorio {
-    height: 400px;
+    height: 350px;
     width: 300px;
     margin: 5px;
-    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+    justify-content: start;
+    overflow: hidden;
+    text-align: start;
     box-shadow: 0 0 8px #00000030;
-    border-radius: 10px;
-    justify-content: space-evenly;
-    border: 1px solid #7171718f;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
-.projeto:hover,.repositorio:hover {
+.repositorio{
+    height: 200px;
+}
+
+.repositorie-loading{
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.repositorie-loading-item1,.repositorie-loading-item2, .repositorie-loading-item3{
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: load 2s ease-in-out infinite;
+}
+
+.repositorie-loading-item2{
+    animation-delay: 500ms;
+}
+
+.repositorie-loading-item3{
+    animation-delay: 800ms;
+}
+
+.projeto-desc, .rep-resume {
+    padding: 0 10px;
+}
+
+.projeto:hover,
+.repositorio:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .projeto-img {
     height: 250px;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 15px;
 }
 
 .projeto-header,
@@ -356,7 +382,7 @@ body {
     }
 
     50% {
-        transform: translateX(-10px);
+        transform: translateX(-5px);
     }
 
     100% {
@@ -384,12 +410,28 @@ body {
     }
 }
 
+@keyframes load {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
 @media (max-width : 1024px) {
 
     .repositorios-container,
     .projetos-container {
         grid-template-columns: repeat(2, 1fr);
         place-content: center;
+        grid-gap: 4px;
     }
 }
 
@@ -399,23 +441,22 @@ body {
         width: 10px;
     }
 
-    .repositorios-container,
-    .projetos-container {
-        place-content: unset;
-        display: flex;
-        width: 92vw;
-        overflow-x: scroll;
-        align-items: center;
-    }
-
-    .projeto:hover,.repositorio:hover,.habilidade:hover {
+    .projeto:hover,
+    .repositorio:hover,
+    .habilidade:hover {
         transform: scale(1);
     }
 
-    .repositorio,
-    .projeto {
-        height: 500px;
-        min-width: 90vw;
+    .repositorios-container,
+    .projetos-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;align-items: center;    
+    }
+
+    .projetos-container{
+        margin-bottom: 50px;
+        gap: 5px;
     }
 
     .header {
@@ -487,10 +528,11 @@ body {
     .habilidades-container {
         width: 80vw;
         gap: 8px;
-        height: 650px;
+        height: 700px;
     }
 
-    .habilidade {
+    .habilidade, .repositorio,
+    .projeto {
         width: 100%;
         height: 115px;
         padding: 10px;
@@ -498,16 +540,16 @@ body {
     }
 
     .habilidade--html {
-        background-color: rgb(255, 51, 0);
+        background-color: #ff3300;
     }
 
     .habilidade--css {
-        background-color: rgb(0, 68, 255);
+        background-color: #0044ff;
     }
 
     .habilidade--js {
         color: #000;
-        background-color: rgb(251, 255, 0);
+        background-color: #fbff00;
     }
 
     .habilidade--react {
@@ -515,7 +557,7 @@ body {
     }
 
     .habilidade--redux {
-        background-color: #6737B8;
+        background-color: #6135ac;
     }
 
     .habilidade--git {
@@ -540,9 +582,27 @@ body {
         font-weight: bold;
     }
 
-    .rep-link,
-    .proj-link {
-        padding: 10px;
+    .repositorio{
+        height: 130px;
+    }
+
+    .rep-title{
+        padding: 0;
+    }
+
+    .rep-resume{
+        padding: 0;
+    }
+
+    .projeto{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .projeto-img{
+        height: 100px;
+        width: 100px;
+        border-radius:10px;
     }
 
     @keyframes apresentation {
