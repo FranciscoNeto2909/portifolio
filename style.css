@@ -8,7 +8,7 @@ html {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: 'Quicksand','Segoe UI', sans-serif;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
 }
 
 body,
@@ -24,8 +24,10 @@ body,
     flex-direction: column;
 }
 
+/* #1F2526 */
 body {
-    background-color: #C7E2FA;
+    background-color: #20232F;
+    color: #fff;
     align-items: center;
     overflow-x: hidden;
 }
@@ -48,9 +50,10 @@ body {
     width: 100vw;
     position: sticky;
     top: 0;
-    background-color: #C7E2FA;
+    background-color: 20232F;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);
     align-items: center;
+    background-color: #20232F;
     z-index: 1;
 }
 
@@ -66,7 +69,7 @@ body {
 }
 
 .menu-item {
-    color: rgb(100, 100, 100);
+    color: #fff;
     padding: 5px;
     margin-top: 5px;
     border-radius: 2px;
@@ -75,7 +78,7 @@ body {
 
 .menu-item:hover {
     color: rgb(50, 50, 50);
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: #19E3E6;
     cursor: pointer;
 }
 
@@ -105,50 +108,82 @@ body {
 }
 
 .apresentation {
-    width: 540px;
-    margin: 0 auto;
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.title-container {
-    overflow: hidden;
-    position: relative;
-    height: 38px;
-    text-align: start;
-    border-right: 1px solid;
-    animation: apresentation 8s steps(30) 1s infinite, blink 1s ease-in-out infinite;
+    width: 100%;
+    margin: 20px 0 60px;
 }
 
 .title {
-    width: 530px;
+    margin-left: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 10ch;
     font-size: 26px;
-    position: absolute;
+    animation: typing 8s steps(30) infinite;
+    text-align: center;
 }
 
 .info {
-    width: 500px;
     gap: .5rem;
-    margin: 30px auto;
+    margin: 30px auto 10px;
     padding: 10px;
     padding-bottom: 20px;
     border-radius: 15px;
+    flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0 0 8px #00000030;
+}
+
+.info-header {
+    animation: move 3s ease-in-out infinite;
+    padding: 0 40px 20px;
+}
+
+.info-img-container {
+    height: 220px;
+    width: 220px;
+    background-color: #19e3e6;
+    border-radius: 25px;
+    transform: rotate(45deg);
+    position: relative;
 }
 
 .info-img {
-    height: 250px;
-    border-radius: 10px;
+    transform: rotate(-45deg) translateY(9px) translateX(6px);
+    height: 240px;
+    border-radius: 35%;
     margin: 5px 0;
 }
 
+.info-square {
+    bottom: -100px;
+    right: -50px;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    background-color: #20232F;
+}
+
+.square-2 {
+    top: 100px;
+    transform: rotate(90deg);
+    left: 170px;
+}
+
+.info-body {
+    max-width: 30%;
+}
+
+.info-title {
+    font-size: 34px;
+    white-space: nowrap;
+}
+
 .info-resume {
+    margin-top: 8px;
+    font-size: 20px;
     font-weight: bold;
-    color: #4b4b4b;
+    text-align: center;
 }
 
 .habilidades,
@@ -255,14 +290,14 @@ body {
 
 }
 
-.rep-title{
+.rep-title {
     text-align: center;
     padding: 10px;
 }
 
 .rep-resume,
 .proj-resume {
-    color: #4b4b4b;
+    color: #fff;
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -292,11 +327,11 @@ body {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.repositorio{
+.repositorio {
     height: 200px;
 }
 
-.repositorie-loading{
+.repositorie-loading {
     margin: 0 auto;
     margin-top: 25px;
     display: flex;
@@ -305,23 +340,26 @@ body {
     justify-content: center;
 }
 
-.repositorie-loading-item1,.repositorie-loading-item2, .repositorie-loading-item3{
+.repositorie-loading-item1,
+.repositorie-loading-item2,
+.repositorie-loading-item3 {
     height: 5px;
     width: 5px;
-    background-color: #000;
+    background-color: #fff;
     border-radius: 50%;
     animation: load 2s ease-in-out infinite;
 }
 
-.repositorie-loading-item2{
+.repositorie-loading-item2 {
     animation-delay: 500ms;
 }
 
-.repositorie-loading-item3{
+.repositorie-loading-item3 {
     animation-delay: 800ms;
 }
 
-.projeto-desc, .rep-resume {
+.projeto-desc,
+.rep-resume {
     padding: 0 10px;
 }
 
@@ -342,6 +380,10 @@ body {
     position: relative;
 }
 
+.social {
+    margin-top: 50px;
+}
+
 .social-icons-container {
     margin-top: 15px;
     display: flex;
@@ -360,6 +402,20 @@ body {
 .social-icons:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes moveToRight {
@@ -390,13 +446,13 @@ body {
     }
 }
 
-@keyframes apresentation {
+@keyframes typing {
     0% {
         width: 0;
     }
 
     100% {
-        width: 42ch;
+        width: 25ch;
     }
 }
 
@@ -419,7 +475,7 @@ body {
         transform: translateY(0px);
     }
 
-    60%{
+    60% {
         transform: translateY(-10px);
     }
 
@@ -459,10 +515,11 @@ body {
     .projetos-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;align-items: center;    
+        gap: 10px;
+        align-items: center;
     }
 
-    .projetos-container{
+    .projetos-container {
         margin-bottom: 50px;
         gap: 5px;
     }
@@ -485,6 +542,14 @@ body {
         box-shadow: 2px 2px 6px #000;
     }
 
+    .menu-item:hover {
+        background-color: inherit;
+    }
+
+    .item-img {
+        filter: brightness(100);
+    }
+
     .header-menu {
         width: 80vw;
         align-items: center;
@@ -503,10 +568,6 @@ body {
         padding: 10px;
     }
 
-    .apresentation {
-        width: 330px;
-    }
-
     .title-container {
         height: 25px;
     }
@@ -516,17 +577,58 @@ body {
     }
 
     .title {
+        margin-left: 25px;
         font-size: 1.4em;
     }
 
     .info {
-        width: 100%;
-        margin-top: 50px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info-title{
+        font-size: 28px;
+    }
+
+    .info-body {
+        max-width: 100%;
+    }
+
+    .info-img-container {
+        height: 150px;
+        width: 150px;
+        background-color: #19e3e6;
+        border-radius: 25px;
+        transform: rotate(45deg);
+    }
+
+    .info-img {
+        height: 165px;
+        transform: rotate(-45deg) translatex(6px);
+    }
+
+    .info-square {
+        bottom: -30px;
+        right: -5px;
+        border-radius: 10px;
+        height: 30px;
+        width: 100px;
+    }
+
+    .square-2 {
+        top: 90px;
+        transform: rotate(90deg);
+        left: 114px;
+    }
+
+    .info-title {
+        margin: 8px 0;
     }
 
     .info-resume {
+        width: 100%;
         margin: 0%;
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .habilidades-title {
@@ -539,7 +641,8 @@ body {
         height: 700px;
     }
 
-    .habilidade, .repositorio,
+    .habilidade,
+    .repositorio,
     .projeto {
         width: 100%;
         height: 115px;
@@ -590,27 +693,27 @@ body {
         font-weight: bold;
     }
 
-    .repositorio{
+    .repositorio {
         height: 130px;
     }
 
-    .rep-title{
+    .rep-title {
         padding: 0;
     }
 
-    .rep-resume{
+    .rep-resume {
         padding: 0;
     }
 
-    .projeto{
+    .projeto {
         height: 130px;
         display: flex;
         flex-direction: row-reverse;
     }
 
-    .projeto-img{
+    .projeto-img {
         height: 100px;
         width: 100px;
-        border-radius:10px;
+        border-radius: 10px;
     }
 }

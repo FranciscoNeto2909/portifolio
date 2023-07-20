@@ -26,42 +26,42 @@
     <header class="header-mobile">
         <hr class="header-line">
         <nav class="header-menu">
-            <a href="#inicio" class="mobile-icon">
-                <img class="item-img" src="https://icones.pro/wp-content/uploads/2021/02/icone-de-la-maison-grise.png"
+            <a href="#inicio" class="menu-item">
+                <img class="item-img" src="https://www.svgrepo.com/show/499611/home.svg"
                     alt="home-icon">
             </a>
-            <a class="menu-item" href="#habilidades" class="mobile-icon">
-                <img class="item-img" src="https://cdn-icons-png.flaticon.com/512/1066/1066334.png"
+            <a class="menu-item" href="#habilidades">
+                <img class="item-img" src="https://www.svgrepo.com/show/529004/hand-stars.svg"
                     alt="habilidade-icon">
             </a>
-            <a class="menu-item" href="#repositorios" class="mobile-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2232/2232189.png" alt="repositórios-icon"
+            <a class="menu-item" href="#repositorios">
+                <img src="https://www.svgrepo.com/show/529253/transmission.svg" alt="repositórios-icon"
                     class="item-img">
             </a>
-            <a class="menu-item" href="#projetos" class="mobile-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/84/84471.png" alt="projetos-icon" class="item-img">
+            <a class="menu-item" href="#projetos">
+                <img src="https://www.svgrepo.com/show/528961/feed.svg" alt="projetos-icon" class="item-img">
             </a>
         </nav>
     </header>
     <main class="main">
         <section id="inicio" class="inicio">
             <div class="apresentation">
-                <div class="title-container">
                     <h1 class="title">Olá, me chamo Francisco Neto</h1>
-                </div>
             </div>
             <div class="info">
                 <div class="info-header">
-                    <img src="./img/Meu projeto.png" alt="" class="info-img">
-                    <h1 class="info-title">Programador front-end</h1>
+                    <div class="info-img-container">
+                        <img src="./img/eu.png" alt="" class="info-img">
+                        <div class="info-square"></div>
+                        <div class="info-square square-2"></div>
+                    </div>
                 </div>
-                <p class="info-resume">
-                    Durante o ensino medio tive meu primeiro contato com a programação, aprendi lógica de programação em
-                    linguagem C e posteriormente desenvolvi utilizando arduino e junto a colegas, um ventilador que aumentava sua velocidade
-                    de acordo com a temperatura do ambiente. Após o ensino médio continuei estudando lógica de
-                    programação e há 2 anos decidi estudar programação web
-                    com ênfase em desenvolvimento front-end.
-                </p>
+                <div class="info-body">
+                    <h1 class="info-title">Programador front-end</h1>
+                    <p class="info-resume">
+                        A beleza do código está na simplicidade, na elegância e na sua capacidade de resolver complexidades.
+                    </p>
+                </div>
             </div>
             <div class="social">
                 <h2>Contatos</h2>
@@ -159,10 +159,26 @@
             </div>
             <div class="repositorios-container">
                 <div class="repositorio"
-                    onclick="window.open('https://github.com/FranciscoNeto2909/Advice-app','_blank')">
-                    <h3 class="rep-title">Advices app</h3>
-                    <p class="rep-resume">Uma aplicação para os usuarios postarem conselhos uns para os outros. <br>
-                        Utiliza: React, react-router-dom,Redux, uuid e axios.</p>
+                    onclick="window.open('https://github.com/FranciscoNeto2909/TodoList-ts','_blank')">
+                    <h3 class="rep-title">Todo-list</h3>
+                    <p class="rep-resume">aplicação desenvolvida para auxiliar o usuario a organiar suas tarefas. <br>
+                        Utiliza:React, react-icons, typescript e redux-toolkit</p>
+                </div>
+                <div class="repositorio"
+                    onclick="window.open('https://github.com/FranciscoNeto2909/feedback-widget','_blank')">
+                    <h3 class="rep-title">Feedback widget</h3>
+                    <p class="rep-resume">Componente de aplicação desenvolvido para que o usuário possa dar um feedback
+                        mais específico.
+                        <br> Utiliza:react, phosphoreact e
+                        tailwind
+                    </p>
+                </div>
+                <div class="repositorio"
+                    onclick="window.open('https://github.com/FranciscoNeto2909/mybnbApi','_blank')">
+                    <h3 class="rep-title">Mybnb Api</h3>
+                    <p class="rep-resume">Uma api CRUD criada para fornecer dados de sobre alguns tipos de acomodações.
+                        <br>
+                        Utiliza:Expressjs, jsonwebtoken, nodemailer, sqlite3 e sequelize.</p>
                 </div>
                 <div class="repositorio"
                     onclick="window.open('https://github.com/FranciscoNeto2909/rick-and-morty','_blank')">
@@ -171,24 +187,10 @@
                         Utiliza: React, react-router-dom e axios.</p>
                 </div>
                 <div class="repositorio"
-                    onclick="window.open('https://github.com/FranciscoNeto2909/TodoList-ts','_blank')">
-                    <h3 class="rep-title">Todo-list</h3>
-                    <p class="rep-resume">aplicação desenvolvida para auxiliar o usuario a organiar suas tarefas. <br>
-                        Utiliza:React, react-icons, typescript e redux-toolkit</p>
-                </div>
-                <div class="repositorio"
                     onclick="window.open('https://github.com/FranciscoNeto2909/fakestoreapp','_blank')">
                     <h3 class="rep-title">FakeStore app</h3>
                     <p class="rep-resume">Aplicação desenvolvida para praticar requisições http e consumir a api
                         fakestoreApi <br> Utiliza: React, reac-router-dom e axios </p>
-                </div>
-                <div class="repositorio"
-                    onclick="window.open('https://github.com/FranciscoNeto2909/feedback-widget','_blank')">
-                    <h3 class="rep-title">Feedback widget</h3>
-                    <p class="rep-resume">Componente de aplicação desenvolvido para que o usuário possa dar um feedback mais específico.
-                        <br> Utiliza:react, phosphoreact e
-                        tailwind
-                    </p>
                 </div>
                 <div class="repositorio">
                     <h3 class="rep-title">Em desenvolvimento...</h3>
