@@ -118,7 +118,7 @@ body {
     white-space: nowrap;
     width: 10ch;
     font-size: 26px;
-    animation: typing 8s steps(30) infinite;
+    animation: typing 4s steps(35) infinite;
     text-align: center;
 }
 
@@ -145,29 +145,14 @@ body {
     border-radius: 25px;
     transform: rotate(45deg);
     position: relative;
+    overflow: hidden;
 }
 
 .info-img {
-    transform: rotate(-45deg) translateY(9px) translateX(6px);
+    transform: rotate(-45deg) translateY(7px) translateX(6px);
     height: 240px;
     border-radius: 35%;
     margin: 5px 0;
-}
-
-.info-square {
-    bottom: -100px;
-    right: -50px;
-    border-radius: 25px;
-    height: 100px;
-    width: 200px;
-    position: absolute;
-    background-color: #20232F;
-}
-
-.square-2 {
-    top: 100px;
-    transform: rotate(90deg);
-    left: 170px;
 }
 
 .info-body {
@@ -605,20 +590,6 @@ body {
     .info-img {
         height: 165px;
         transform: rotate(-45deg) translatex(6px);
-    }
-
-    .info-square {
-        bottom: -40px;
-        right: -5px;
-        border-radius: 10px;
-        height: 40px;
-        width: 100px;
-    }
-
-    .square-2 {
-        top: 80px;
-        transform: rotate(90deg);
-        left: 120px;
     }
 
     .info-title {
