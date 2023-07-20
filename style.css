@@ -608,17 +608,17 @@ body {
     }
 
     .info-square {
-        bottom: -30px;
+        bottom: -40px;
         right: -5px;
         border-radius: 10px;
-        height: 30px;
+        height: 40px;
         width: 100px;
     }
 
     .square-2 {
-        top: 90px;
+        top: 80px;
         transform: rotate(90deg);
-        left: 114px;
+        left: 120px;
     }
 
     .info-title {
