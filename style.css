@@ -84,6 +84,17 @@ body {
 
 .header-mobile {
     display: none;
+    transform-origin: bottom;
+}
+
+.hide-header-mobile {
+    animation: hide ease-in-out 500ms normal;
+    animation-fill-mode: forwards;
+}
+
+.show-header-mobile {
+    animation: show ease-in-out 500ms normal;
+    animation-fill-mode: forwards;
 }
 
 .item-img {
@@ -472,6 +483,26 @@ body {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
     }
 }
 
