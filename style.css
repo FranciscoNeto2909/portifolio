@@ -158,7 +158,7 @@ body {
     transform: rotate(45deg);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 6px #ffffff49;
 }
 
 .info-img {
@@ -321,8 +321,8 @@ body {
     justify-content: start;
     overflow: hidden;
     text-align: start;
-    box-shadow: 0 0 8px #00000030;
-    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid darkslategray;
+    background-color: transparent;
 }
 
 .repositorio {
