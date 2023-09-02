@@ -681,6 +681,10 @@ body {
         box-shadow: 0 0 6px #00000090;
     }
 
+    .repositorio{
+        padding: 0;
+    }
+
     .habilidade--html {
         background-color: #ff3300;
     }
@@ -725,19 +729,17 @@ body {
     }
 
     .repositorio {
+        width: 340px;
         height: 150px;
+        padding: 0 10px;
+    }
+
+    .repositorio-title{
+        margin-top: 16px;
     }
 
     .rep-deps {
         font-size: 14px;
-    }
-
-    .rep-title {
-        padding: 0;
-    }
-
-    .rep-resume {
-        padding: 0;
     }
 
     .projeto {
@@ -755,5 +757,9 @@ body {
         height: 100px;
         width: 100px;
         border-radius: 10px;
+    }
+
+    .social{
+        margin-left: 10px;
     }
 }
