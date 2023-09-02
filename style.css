@@ -592,7 +592,7 @@ body {
     .habilidades,
     .repositorios,
     .projetos {
-        width: 100vw;
+        min-width: 100vw;
     }
 
     .inicio {
@@ -669,7 +669,6 @@ body {
         width: 85vw;
         padding-left: 0;
         gap: 8px;
-        height: 700px;
     }
 
     .habilidade,
