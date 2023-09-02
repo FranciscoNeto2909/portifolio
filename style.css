@@ -124,7 +124,7 @@ body {
 }
 
 .title {
-    margin-left: 200px;
+    margin-left: 104px;
     overflow: hidden;
     white-space: nowrap;
     width: 10ch;
@@ -135,12 +135,13 @@ body {
 
 .info {
     gap: .5rem;
+    width: 86vw;
     margin: 30px auto 10px;
     padding: 10px;
     padding-bottom: 20px;
     border-radius: 15px;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -169,6 +170,8 @@ body {
 }
 
 .info-body {
+    margin-left: 30px;
+    text-align: start;
     max-width: 40%;
 }
 
@@ -181,22 +184,27 @@ body {
     margin-top: 8px;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
+    text-align: start;
 }
 
-.habilidades,
-.repositorios,
-.projetos {
-    padding: 20px;
+.habilidades {
     text-align: center;
     align-items: center;
 }
 
 
-.habilidades-title {
+.habilidades-title,
+.repositorio-title,
+.projeto-title {
+    text-align: start;
+    width: 100%;
+    padding: 12px 24px;
     font-size: 2em;
     margin-bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+.habilidades-title {
+    width: 84%;
 }
 
 .habilidades-container {
@@ -280,12 +288,23 @@ body {
 
 .repositorios-container,
 .projetos-container {
-    width: 80vw;
+    width: 81vw;
+    margin: 0 auto;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 
+}
+
+.projetos-container {
+    width: 87vw;
+}
+
+.repositorio-header,
+.projeto-header {
+    margin: 0 auto;
+    width: 83.5vw;
 }
 
 .rep-title {
@@ -318,6 +337,7 @@ body {
     margin: 5px;
     border-radius: 15px;
     gap: 10px;
+    padding: 12px;
     justify-content: start;
     overflow: hidden;
     text-align: start;
@@ -326,7 +346,8 @@ body {
 }
 
 .repositorio {
-    height: 200px;
+    height: 250px;
+    width: 350px;
 }
 
 .repositorie-loading {
@@ -356,10 +377,6 @@ body {
     animation-delay: 800ms;
 }
 
-.projeto-desc,
-.rep-resume {
-    padding: 0 10px;
-}
 
 .projeto:hover,
 .repositorio:hover {
@@ -368,25 +385,22 @@ body {
 }
 
 .projeto-img {
-    height: 250px;
+    height: 230px;
     width: 100%;
     border-radius: 15px;
 }
 
-.projeto-header,
-.repositorio-header {
-    position: relative;
+.social {
+    margin: 50px 0 0 8%;
 }
 
-.social {
-    margin-top: 50px;
+.social-title {
+    text-align: start;
 }
 
 .social-icons-container {
     margin-top: 15px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 25px;
 }
 
@@ -604,11 +618,13 @@ body {
         gap: 30px;
     }
 
-    .info-title{
+    .info-title {
         font-size: 28px;
     }
 
     .info-body {
+        padding: 0;
+        margin: 0;
         max-width: 100%;
     }
 
@@ -635,7 +651,9 @@ body {
         font-size: 1em;
     }
 
-    .habilidades-title {
+    .habilidades-title,
+    .repositorio-title,
+    .projeto-title {
         font-size: 1.5em;
     }
 
@@ -701,9 +719,11 @@ body {
         height: 150px;
         padding-top: 5px;
     }
-    .rep-deps{
-    font-size: 14px;
+
+    .rep-deps {
+        font-size: 14px;
     }
+
     .rep-title {
         padding: 0;
     }
@@ -719,7 +739,7 @@ body {
         flex-direction: row-reverse;
     }
 
-    .proj-title{
+    .proj-title {
         padding-bottom: 4px;
     }
 
