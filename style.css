@@ -673,6 +673,7 @@ body {
     }
 
     .habilidade,
+    .repositorio,
     .projeto {
         width: 100%;
         height: 115px;
