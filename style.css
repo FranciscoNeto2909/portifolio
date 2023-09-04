@@ -59,7 +59,7 @@ body {
 
 .header-line {
     margin-top: 20px;
-    width: 80%;
+    width: calc(100% - 260px);
 }
 
 .header-menu {
@@ -197,23 +197,19 @@ body {
 .repositorio-title,
 .projeto-title {
     text-align: start;
-    width: 100%;
+    width: calc(100% - 210px);
     padding: 12px 24px;
     font-size: 2em;
     margin-bottom: 15px;
 }
 
-.habilidades-title {
-    width: 84%;
-}
-
 .habilidades-container {
-    width: 90%;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
-    gap: 40px;
+    gap: 20px 0;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .habilidade {
@@ -234,15 +230,16 @@ body {
 }
 
 .habilidade-img {
-    height: 150px;
+    height: 115px;
 }
 
 .habilidade:hover {
     transform: scale(1.05);
 }
 
-.habilidade-img--react {
-    height: 120px;
+.habilidade-img--react,
+.habilidade-img--git {
+    height: 94px;
 }
 
 .habilidade-desc {
@@ -288,23 +285,22 @@ body {
 
 .repositorios-container,
 .projetos-container {
-    width: 81vw;
+    width: 100vw;
+    max-width: 1160px;
     margin: 0 auto;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 8px;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     justify-items: center;
-
 }
 
-.projetos-container {
-    width: 87vw;
-}
-
+.habilidades-header,
 .repositorio-header,
 .projeto-header {
     margin: 0 auto;
-    width: 83.5vw;
+    width: 100vw;
+    max-width: 1160px;
 }
 
 .rep-title {
@@ -347,7 +343,7 @@ body {
 
 .repositorio {
     height: 250px;
-    width: 350px;
+    width: 320px;
 }
 
 .repositorie-loading {
@@ -414,6 +410,16 @@ body {
 .social-icons:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.footer{
+    margin: 12px 0 0 0;
+    height: 50px;
+    width: 100vw;
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @keyframes move {
@@ -543,6 +549,15 @@ body {
         transform: scale(1);
     }
 
+    .habilidades-title,
+    .repositorio-title,
+    .projeto-title {
+        width: 100%;
+        padding: 0;
+        margin: 12px 0 12px 0;
+        font-size: 1.5em;
+    }
+
     .repositorios-container,
     .projetos-container {
         display: flex;
@@ -652,19 +667,6 @@ body {
         font-size: 1em;
     }
 
-    .habilidades-title,
-    .repositorio-title,
-    .projeto-title {
-        width: 100%;
-        padding: 0;
-        margin: 12px 0 12px 0;
-        font-size: 1.5em;
-    }
-
-    .habilidades-title {
-        padding: 0 40px;
-    }
-
     .habilidades-container {
         width: 85vw;
         padding-left: 0;
@@ -765,5 +767,9 @@ body {
 
     .social {
         margin-left: 10px;
+    }
+
+    .footer{
+        padding: 0 24px;
     }
 }
