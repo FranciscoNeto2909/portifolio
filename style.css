@@ -1,3 +1,8 @@
+:root{
+    --bg-primary:#20232F;
+    --primary:#fff;
+    --cards-bords:#2f4f4f;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -26,8 +31,8 @@ body,
 
 /* #1F2526 */
 body {
-    background-color: #20232F;
-    color: #fff;
+    background-color: var(--bg-primary);
+    color: var(--primary);
     align-items: center;
     overflow-x: hidden;
 }
@@ -53,7 +58,7 @@ body {
     background-color: 20232F;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);
     align-items: center;
-    background-color: #20232F;
+    background-color: var(--bg-primary);
     z-index: 1;
 }
 
@@ -69,7 +74,7 @@ body {
 }
 
 .menu-item {
-    color: #fff;
+    color: var(--primary);
     padding: 5px;
     margin-top: 5px;
     border-radius: 2px;
@@ -217,7 +222,7 @@ body {
     height: 214px;
     padding: 10px;
     border-radius: 10px;
-    color: #fff;
+    color: var(--primary);
     display: flex;
     text-align: start;
     box-shadow: 0 0 10px #00000050;
@@ -310,7 +315,7 @@ body {
 
 .rep-resume,
 .proj-resume {
-    color: #fff;
+    color: var(--primary);
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -337,8 +342,7 @@ body {
     justify-content: start;
     overflow: hidden;
     text-align: start;
-    border: 2px solid darkslategray;
-    background-color: transparent;
+    border: 2px solid var(--cards-bords);
 }
 
 .repositorio {
@@ -360,7 +364,7 @@ body {
 .repositorie-loading-item3 {
     height: 5px;
     width: 5px;
-    background-color: #fff;
+    background-color: var(--primary);
     border-radius: 50%;
     animation: load 2s ease-in-out infinite;
 }
