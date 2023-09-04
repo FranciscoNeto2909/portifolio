@@ -209,7 +209,8 @@ body {
 }
 
 .habilidades-container {
-    width: 90vw;
+    width: 100vw;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
     gap: 20px 0;
