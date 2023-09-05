@@ -1,8 +1,9 @@
-:root{
-    --bg-primary:#20232F;
-    --primary:#fff;
-    --cards-bords:#2f4f4f;
+:root {
+    --bg-primary: #20232F;
+    --primary: #fff;
+    --cards-bords: #2f4f4f;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -304,6 +305,7 @@ body {
 .habilidades-header,
 .repositorio-header,
 .projeto-header {
+    overflow: hidden;
     margin: 0 auto;
     width: 100vw;
     max-width: 1160px;
@@ -417,7 +419,7 @@ body {
     cursor: pointer;
 }
 
-.footer{
+.footer {
     margin: 12px 0 0 0;
     height: 50px;
     width: 100vw;
@@ -557,9 +559,9 @@ body {
     .habilidades-title,
     .repositorio-title,
     .projeto-title {
-        width: 100%;
+        width: 300px;
         padding: 0;
-        margin: 12px 0 12px 0;
+        margin: 12px 0 0 28px;
         font-size: 1.5em;
     }
 
@@ -673,8 +675,9 @@ body {
     }
 
     .habilidades-container {
-        width: 85vw;
-        padding-left: 0;
+        overflow: hidden;
+        width: 100vw;
+        padding: 24px;
         gap: 8px;
     }
 
@@ -728,6 +731,10 @@ body {
         height: 50px;
     }
 
+    .habilidade-img--git {
+        height: 55px;
+    }
+
     .habilidade-desc {
         font-size: .72rem;
         margin-top: 0;
@@ -741,7 +748,7 @@ body {
     }
 
     .repositorio {
-        height: 150px;
+        height: 170px;
         padding: 0 10px;
     }
 
@@ -757,6 +764,7 @@ body {
         height: 150px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-direction: row-reverse;
     }
 
@@ -774,7 +782,7 @@ body {
         margin-left: 10px;
     }
 
-    .footer{
+    .footer {
         padding: 0 24px;
     }
 }
