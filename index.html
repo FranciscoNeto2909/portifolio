@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Meu portifólio</title>
-    <script src="./script.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/eu.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
             <div class="apresentation">
                 <h1 class="title">Olá, me chamo Francisco Neto</h1>
             </div>
-            <div class="info">
+            <div class="info" data-aos="fade-up" data-aos-duration="2500">
                 <div class="info-header">
                     <div class="info-img-container">
                         <img src="./img/eu.png" alt="" class="info-img">
@@ -61,7 +61,7 @@
                     </p>
                 </div>
             </div>
-            <div class="social">
+            <div class="social" data-aos="fade-up" data-aos-duration="2500">
                 <h2 class="social-title">Contatos</h2>
                 <div class="social-icons-container">
                     <a href="http://wa.me/5585997844445?text=Ola!">
@@ -79,7 +79,7 @@
 
             </div>
         </section>
-        <section id="habilidades" class="habilidades">
+        <section id="habilidades" class="habilidades" data-aos="fade-up" data-aos-duration="2500">
             <div class="habilidades-header">
                 <h2 class="habilidades-title">Principais habilidades</h2>
             </div>
@@ -147,13 +147,13 @@
                             necessário.</p>
                     </div>
                     <div class="habilidade-rightside">
-                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="habilidade-img habilidade-img--git"
-                            alt="habilidade">
+                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                            class="habilidade-img habilidade-img--git" alt="habilidade">
                     </div>
                 </div>
             </div>
         </section>
-        <section id="repositorios" class="repositorios">
+        <section id="repositorios" class="repositorios" data-aos="fade-up" data-aos-duration="2500">
             <div class="repositorio-header">
                 <h2 class="repositorio-title">Principais repositórios</h2>
             </div>
@@ -197,7 +197,7 @@
                 </div>
             </div>
         </section>
-        <section id="projetos" class="projetos">
+        <section id="projetos" class="projetos" data-aos="fade-up" data-aos-duration="2500">
             <div class="projeto-header">
                 <h2 class="projeto-title">Principais projetos</h2>
             </div>
@@ -268,6 +268,13 @@
         <p>Francisco Neto &copy;</p>
         <p>Dez - 2022</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

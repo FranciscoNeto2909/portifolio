@@ -786,3 +786,17 @@ body {
         padding: 0 24px;
     }
 }
+
+@media (max-width:345px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .info-title {
+        font-size: 24px;
+    }
+
+    .info-resume {
+        font-size: 16px;
+    }
+}
