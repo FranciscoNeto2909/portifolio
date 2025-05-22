@@ -61,6 +61,7 @@ body {
     align-items: center;
     background-color: var(--bg-primary);
     z-index: 1;
+    padding-bottom: 4px;
 }
 
 .header-line {
@@ -272,7 +273,7 @@ body {
 }
 
 .habilidade--react {
-    background-color: #00c0c0;
+    background-color: #04b0b0;
 }
 
 .habilidade--redux {
@@ -515,21 +516,21 @@ body {
 
 @keyframes hide {
     0% {
-        transform: scaleY(1);
+        transform: translateY(0);
     }
 
     100% {
-        transform: scaleY(0);
+        transform: translateY(60px);
     }
 }
 
 @keyframes show {
     0% {
-        transform: scaleY(0);
+        transform: translateY(60px);
     }
 
     100% {
-        transform: scaleY(1);
+        transform: translateY(0);
     }
 }
 
